@@ -45,6 +45,11 @@ a:hover{
     animation: bouncyArrow 3s infinite;
 }
 
+.inputs{
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
 @keyframes bouncyArrow {
     0%, 20%, 40%, 100%{
         transform: translateX(0px);

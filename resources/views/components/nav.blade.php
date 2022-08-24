@@ -18,6 +18,24 @@
                     <li class="nav-item">
                         <a class="nav-link text-blue" href="{{route('aboutUs')}}">About eDoctor</a>
                     </li>
+                    @guest
+                        <li class="nav-item">
+                            <a class="nav-link text-blue" href="{{route('login')}}">Accedi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-blue" href="{{route('register')}}">Registrati</a>
+                        </li>
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link text-blue" href="/">Benvenuto, {{Auth::user()->name}}!</a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-blue" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                            <form id="logout-form" action="{{route('logout')}}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </li>
+                    @endguest
                 </ul>
             </div>
         </div>
