@@ -1,5 +1,10 @@
-h1{
-    background-color: green;
+a{
+    text-decoration: none;
+    color: unset;
+}
+
+a:hover{
+    color: unset;
 }
 
 .gFont{
@@ -15,9 +20,36 @@ h1{
     color:rgb(3, 102, 189);
 }
 
+.active{
+    font-weight: 600;
+    color:rgb(3, 102, 189)!important;
+    text-decoration: 2px underline;
+}
+
+#navBtn{
+    border-radius: 12px;
+}
+
+#navBtn:focus{
+    box-shadow: none;
+}
+
 #mainHeader{
     background-image: url(/public/images/doctorCover5.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 230px;
+}
+
+#discoverArrow{
+    animation: bouncyArrow 3s infinite;
+}
+
+@keyframes bouncyArrow {
+    0%, 20%, 40%, 100%{
+        transform: translateX(0px);
+    }
+    10%, 30% {
+        transform: translateX(20px);
+    }
 }

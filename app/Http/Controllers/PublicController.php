@@ -13,4 +13,8 @@ class PublicController extends Controller
     public function allDoctors(){
         return view('allDoctors');
     }
+
+    public function aboutUs(){
+        return view('aboutUs');
+    }
 }

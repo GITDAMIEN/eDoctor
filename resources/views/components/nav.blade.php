@@ -3,20 +3,20 @@
         <div class="align-self-start">
             <a class="navbar-brand gFont fs-1 text-blue" href="{{route('welcome')}}">eDoctor</a>
         </div>
-        <div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+        <div class="text-end">
+            <button id="navBtn" class="navbar-toggler text-blue py-1 px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon text-blue"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav pe-2">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{route('welcome')}}">Home</a>
+                        <a class="nav-link active text-blue" aria-current="page" href="{{route('welcome')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('allDoctors')}}">Find doctor</a>
+                        <a class="nav-link text-blue" href="{{route('allDoctors')}}">Find doctor</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About eDoctor</a>
+                        <a class="nav-link text-blue" href="{{route('aboutUs')}}">About eDoctor</a>
                     </li>
                 </ul>
             </div>

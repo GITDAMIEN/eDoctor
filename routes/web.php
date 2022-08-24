@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PublicController::class, 'welcome'])->name('welcome');
 
 Route::get('/allDoctors', [PublicController::class, 'allDoctors'])->name('allDoctors');
+
+Route::get('/aboutUs', [PublicController::class, 'aboutUs'])->name('aboutUs');
