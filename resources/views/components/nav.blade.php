@@ -13,10 +13,10 @@
                         <a class="nav-link active text-blue" aria-current="page" href="{{route('welcome')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-blue" href="{{route('allDoctors')}}">Find doctor</a>
+                        <a class="nav-link text-blue" href="{{route('allDoctors')}}">Tutti i dottori</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-blue" href="{{route('aboutUs')}}">About eDoctor</a>
+                        <a class="nav-link text-blue" href="{{route('aboutUs')}}">Info su eDoctor</a>
                     </li>
                     @guest
                         <li class="nav-item">

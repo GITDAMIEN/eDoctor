@@ -1,7 +1,7 @@
 <x-layout>
 
     @if($errors->any())
-        <div class="alert bg-danger mb-0 mx-5">
+        <div class="alert alert-danger mb-0 mx-5">
             @foreach ($errors->all() as $error)
                 <div>{{$error}}</div>
             @endforeach
