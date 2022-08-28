@@ -1,7 +1,7 @@
 <x-layout>
 
     @if(session('message'))
-        <div class="alert alert-success">{{session('message')}}</div>
+        <div class="alert alert-success text-center">{{session('message')}}</div>
     @endif
 
     <h2 class="gFont text-center my-5">Tutti i dottori</h2>
@@ -15,9 +15,12 @@
                         @if($doctor->gender == 'Female')
                             {{-- Immagine se donna --}}
                             <img src="./images/doctorF.webp" class="card-img-top" alt="Immagine dottoressa">
+                        @elseif($doctor->gender == 'Male')
+                            {{-- Immagine se uomo --}}
+                            <img src="./images/doctorM.webp" class="card-img-top" alt="Immagine dottore">
                         @else
-                            {{-- Immagine se uomo o lgbtq+ --}}
-                            <img src="./images/doctorM.webp" class="card-img-top" alt="Immagine dottore/dottor*">
+                            {{-- Immagine se non binary --}}
+                            <img src="./images/doctorNB.webp" class="card-img-top" alt="Immagine dottor*">
                         @endif
 
                         <div class="card-body">

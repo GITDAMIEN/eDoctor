@@ -24,9 +24,9 @@ class DoctorRequest extends FormRequest
     public function rules()
     {
         return [
-            "first_name" => 'required|min:2|max:30',
-            "last_name" => 'required|min:2|max:30',
-            "email" => 'required|email|unique:email',
+            "first_name" => 'min:2|max:30', //con la rule 'required' continuo ad ottenere errore nella validation
+            "last_name" => 'min:2|max:30', //con la rule 'required' continuo ad ottenere errore nella validation
+            "email" => 'required|email|unique:doctors,email',
             "gender" => 'required|max:10',
             "specialization" => 'required|min:2|max:30',
             "location" => 'required|min:2|max:30'
@@ -53,6 +53,7 @@ class DoctorRequest extends FormRequest
             'location.max'=>"La città dev'essere di massimo 30 caratteri",
             'gender.max'=>"Il genere dev'essere di massimo 10 caratteri",
             'email.email'=>"Inserisci una email corretta",
+            'email.unique'=>"Esiste già un dottore con questo indirizzo email",
         ];
     }
 }

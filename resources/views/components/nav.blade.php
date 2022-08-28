@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
     <div class="container d-flex justify-content-between mx-3 my-2">
         <div class="align-self-start">
             <a class="navbar-brand gFont fs-1 text-blue" href="{{route('welcome')}}">eDoctor</a>
@@ -8,7 +8,7 @@
                 <span class="navbar-toggler-icon text-blue"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav pe-2">
+                <ul id="navNavNavNav" class="navbar-nav pe-2">
                     <li class="nav-item">
                         <a class="nav-link active text-blue" aria-current="page" href="{{route('welcome')}}">Home</a>
                     </li>
