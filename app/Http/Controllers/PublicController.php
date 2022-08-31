@@ -18,11 +18,18 @@ class PublicController extends Controller
         return view('allDoctors', compact('allDoctors'));
     }
 
-    public function newDoctor(){
-        return view('newDoctor');
-    }
-
     public function aboutUs(){
         return view('aboutUs');
     }
+    
+    public function contactUs(){
+        return view('contactUs');
+    }
+    
+    public function doctorDetails(Doctor $doctor){
+
+        return view('doctorDetails', compact('doctor'));
+    }
+
+
 }

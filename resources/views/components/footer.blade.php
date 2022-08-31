@@ -10,11 +10,10 @@
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
             <!-- Content -->
             <h6 class="text-uppercase fw-bold mb-4 pt-4">
-              Company name
+              eDoctor.it
             </h6>
             <p>
-              Here you can use rows and columns to organize your footer content. Lorem ipsum
-              dolor sit amet, consectetur adipisicing elit.
+              Il sito che rende facile e veloce il contatto tra i pazienti e i migliori dottori nelle vicinanze.
             </p>
           </div>
           <!-- Grid column -->
@@ -22,21 +21,21 @@
           <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Useful links
+            <h6 class="text-uppercase fw-bold mb-4 pt-md-4">
+              Link utili
             </h6>
             <div class="row">
               <p class="col-6">
-                <a href="#!" class="text-reset">Pricing</a>
+                <a href="{{route('welcome')}}" class="text-reset">Home</a>
               </p>
               <p class="col-6">
-                <a href="#!" class="text-reset">Settings</a>
+                <a href="{{route('allDoctors')}}" class="text-reset">Tutti i dottori</a>
               </p>
               <p class="col-6">
-                <a href="#!" class="text-reset">Orders</a>
+                <a href="{{route('aboutUs')}}" class="text-reset">Info su eDoctor</a>
               </p>
               <p class="col-6">
-                <a href="#!" class="text-reset">Help</a>
+                <a href="{{route('contactUs')}}" class="text-reset">Contattaci</a>
               </p>
             </div>
           </div>
@@ -45,14 +44,17 @@
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
-            <p>
+            <h6 class="text-uppercase fw-bold mb-4 pt-md-4">Contatti</h6>
+            <a class="d-block mb-2" href="https://www.google.it/maps/place/Verona+VR/@45.4262289,10.9224914,12z/data=!3m1!4b1!4m5!3m4!1s0x477f5f68699be0e3:0x53f85a636882595b!8m2!3d45.438386!4d10.9916174" target="__blank"><i class="fas fa-home me-3"></i>Verona, Italia</a>
+            <a class="d-block mb-2" href="mailto:info@edoctor.it">
               <i class="fas fa-envelope me-3"></i>
-              info@example.com
-            </p>
-            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+              info@edoctor.it
+            </a>
+            <a class="d-block mb-2" href="tel:+390123456788">
+              <i class="fas fa-phone me-3"></i>
+               +39 01 234 567 88
+            </a>
+            <p><i class="fas fa-print me-3"></i> +39 01 234 567 89</p>
           </div>
           <!-- Grid column -->
         </div>

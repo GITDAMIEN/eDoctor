@@ -18,6 +18,9 @@
                     <li class="nav-item">
                         <a class="nav-link text-blue" href="{{route('aboutUs')}}">Info su eDoctor</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-blue" href="{{route('contactUs')}}">Contattaci</a>
+                    </li>
                     @guest
                         <li class="nav-item">
                             <a class="nav-link text-blue" href="{{route('login')}}">Accedi</a>

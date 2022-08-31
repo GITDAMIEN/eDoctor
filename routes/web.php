@@ -19,10 +19,15 @@ use App\Http\Controllers\PublicController;
 // PUBLIC CONTROLLER
 Route::get('/', [PublicController::class, 'welcome'])->name('welcome');
 Route::get('/allDoctors', [PublicController::class, 'allDoctors'])->name('allDoctors');
-Route::get('/newDoctor', [PublicController::class, 'newDoctor'])->name('newDoctor');
 Route::get('/aboutUs', [PublicController::class, 'aboutUs'])->name('aboutUs');
+Route::get('/contactUs', [PublicController::class, 'contactUs'])->name('contactUs');
+Route::get('/doctorDetails/{doctor}', [PublicController::class, 'doctorDetails'])->name('doctorDetails');
 
 
 // DOCTOR CONTROLLER
-Route::post('/createDoctor', [DoctorController::class, 'createDoctor'])->name('createDoctor');
+Route::get('/newDoctor', [DoctorController::class, 'newDoctor'])->middleware('auth')->name('newDoctor');
+Route::post('/createDoctor', [DoctorController::class, 'createDoctor'])->middleware('auth')->name('createDoctor');
+Route::get('/editDoctor/{doctor}', [DoctorController::class, 'editDoctor'])->middleware('auth')->name('editDoctor');
+Route::put('/submitChanges/{doctor}', [DoctorController::class, 'submitChanges'])->middleware('auth')->name('submitChanges');
+Route::delete('/deleteDoctor/{doctor}', [DoctorController::class, 'deleteDoctor'])->middleware('auth')->name('deleteDoctor');
 
