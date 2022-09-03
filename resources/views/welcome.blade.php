@@ -11,5 +11,9 @@
         <section>
         </section>
     </main>
+    
+    <div class="d-flex justify-content-center">
+        <a href="{{route('contactUs')}}" class="btn btn-warning mt-5">Contattaci!</a>
+    </div>
 
 </x-layout>

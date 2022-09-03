@@ -11,7 +11,7 @@ class Doctor extends Model
 {
     use HasFactory, Searchable;
 
-    protected $fillable = ["first_name","last_name","email","gender","specialization","location", "user_name"];
+    protected $fillable = ["first_name","last_name","email","gender","specialization","location"];
 
     // PER TNTSEARCH
     

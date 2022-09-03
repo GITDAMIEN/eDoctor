@@ -42,7 +42,6 @@ class DoctorController extends Controller
             "gender" => $request->input('gender'),
             "specialization" => $request->input('specialization'),
             "location" => $request->input('location'),
-            "user_name" => Auth::user()->name,
         ]);
 
         if($request->input('gender') == 'Female')

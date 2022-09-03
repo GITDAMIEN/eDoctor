@@ -17,4 +17,8 @@
         </p>
     </div>
 
+    <div class="d-flex justify-content-center">
+        <a href="{{route('allDoctors')}}" class="btn btn-warning mt-5">Trova l* tu* dottor*!</a>
+    </div>
+
 </x-layout>
