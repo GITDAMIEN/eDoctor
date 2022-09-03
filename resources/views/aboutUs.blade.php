@@ -1,5 +1,7 @@
 <x-layout>
 
+    <x-slot name="title">Su di noi</x-slot>
+
     <div class="mt-4">
         <h1 class="text-center gFont">eDoctor</h1>
         <h4 class="text-center gFont">Il tuo dottore a portata di click</h4>

@@ -1,5 +1,7 @@
 <x-layout>
 
+    <x-slot name="title">Dettagli</x-slot>
+
     @if(session('message'))
         <div class="alert alert-success text-center">{{session('message')}}</div>
     @endif
@@ -26,6 +28,8 @@
             <p>Genere: {{$doctor->gender}}</p>
             <p>Città: {{$doctor->location}}</p>
             <p>Specializzazione: {{$doctor->specialization}}</p>
+            <p class="px-4">Bio: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad delectus facilis nulla possimus repellat laboriosam, harum sapiente quasi nesciunt minima incidunt eveniet quo a, maxime deleniti commodi nostrum eaque quia?</p>
+            <p class="smallItalic mt-4">Creat* da {{$doctor->user->name ?? 'admin'}} il {{$doctor->created_at->format('d/m/Y')}}</p>
             <a href="mailto:{{$doctor->email}}" class="btn btn-success w-50 mt-4 detailBtns">
                 <i class="fa-solid fa-phone me-1"></i>
                 Contatta
@@ -35,10 +39,10 @@
                     <i class="fa-solid fa-pencil me-1"></i>
                     Modifica
                 </a>
-                <form id="deleteDoctorForm" method="POST" action="{{route('deleteDoctor', $doctor)}}">
+                <form id="deleteDoctorForm" method="POST" action="{{route('deleteDoctor', $doctor)}}" class="w-50 detailBtns mt-2 px-0">
                     @csrf
                     @method('delete')
-                    <button type="button" class="btn btn-danger w-50 mt-2 detailBtns" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <i class="fa-solid fa-trash me-2"></i>
                         Elimina
                     </button>

@@ -1,13 +1,12 @@
 let navAnchors = document.querySelectorAll('#navNavNavNav>li>a');
 
 console.log(navAnchors)
-navAnchors.forEach((anchor,index)=> {
-    anchor.addEventListener('click', ()=>{
-        navAnchors.forEach((a,i)=>{
-            if(i==index)
-                a.classList.add('active')
-            else
-                a.classList.remove('active')
+navAnchors.forEach(anchor => {
+    anchor.addEventListener('click',()=>{
+        anchor.classList.add('active')
+        navAnchors.forEach(el=>{
+            if(el!=anchor)
+                el.classList.remove('active')
         })
     })
 })

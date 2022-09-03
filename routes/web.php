@@ -22,6 +22,8 @@ Route::get('/allDoctors', [PublicController::class, 'allDoctors'])->name('allDoc
 Route::get('/aboutUs', [PublicController::class, 'aboutUs'])->name('aboutUs');
 Route::get('/contactUs', [PublicController::class, 'contactUs'])->name('contactUs');
 Route::get('/doctorDetails/{doctor}', [PublicController::class, 'doctorDetails'])->name('doctorDetails');
+Route::get('/searchDoctor', [PublicController::class, 'searchDoctor'])->name('searchDoctor');
+Route::post('/contactForm', [PublicController::class, 'contactForm'])->name('contactForm');
 
 
 // DOCTOR CONTROLLER
@@ -30,4 +32,3 @@ Route::post('/createDoctor', [DoctorController::class, 'createDoctor'])->middlew
 Route::get('/editDoctor/{doctor}', [DoctorController::class, 'editDoctor'])->middleware('auth')->name('editDoctor');
 Route::put('/submitChanges/{doctor}', [DoctorController::class, 'submitChanges'])->middleware('auth')->name('submitChanges');
 Route::delete('/deleteDoctor/{doctor}', [DoctorController::class, 'deleteDoctor'])->middleware('auth')->name('deleteDoctor');
-

@@ -14,3 +14,6 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/storage/doctors.index-shm
+/storage/doctors.index-wal
+/storage/*.indexl

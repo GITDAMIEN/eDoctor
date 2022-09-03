@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Doctor;
 use Illuminate\Http\Request;
 use App\Http\Requests\DoctorRequest;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\EditDoctorRequest;
 
 class DoctorController extends Controller
@@ -33,13 +34,15 @@ class DoctorController extends Controller
     public function createDoctor(DoctorRequest $request)
     {
 
-        $newDoctor = Doctor::create([
+        $user = Auth::user();
+        $user->doctors()->create([
             "first_name" => $request->input('first_name'),
             "last_name" => $request->input('last_name'),
             "email" => $request->input('email'),
             "gender" => $request->input('gender'),
             "specialization" => $request->input('specialization'),
             "location" => $request->input('location'),
+            "user_name" => Auth::user()->name,
         ]);
 
         if($request->input('gender') == 'Female')

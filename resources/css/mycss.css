@@ -92,6 +92,17 @@ a:hover{
     margin-left: 50%;
     transform: translateX(-50%);
     color: black;
+    max-width: 200px;
+}
+
+.smallItalic{
+    font-style: italic;
+    font-weight: 400;
+    font-size: small;
+}
+
+#searchBox{
+    border-radius: 10px;
 }
 
 @keyframes bouncyArrow {

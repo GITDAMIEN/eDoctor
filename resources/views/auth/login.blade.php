@@ -1,5 +1,7 @@
 <x-layout>
 
+    <x-slot name="title">Login</x-slot>
+
     @if($errors->any())
         <div class="alert alert-danger mb-0 mx-5">
             @foreach ($errors->all() as $error)
